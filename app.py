@@ -26,7 +26,7 @@ prompt_template = PromptTemplate.from_template("Answer based ONLY on context:\n\
 rag_chain = prompt_template | llm | StrOutputParser()
 
 # 4. User Input Chat Box
-if query_text := st.chat_input("What is the big idea of the Grade 1 Language curriculum?"):
+if query_text := st.chat_input("Enter your question here..."):
     with st.chat_message("user"):
         st.write(query_text)
         
